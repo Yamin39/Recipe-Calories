@@ -10,7 +10,7 @@ export default {
         "dark-six": "#878787",
         "dark-80": "#282828CC",
         "dark-70": "#150B2BB3",
-        "dark-60 ": "#150B2B99",
+        "dark-60": "#150B2B99",
       },
     },
   },
