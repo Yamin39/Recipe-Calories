@@ -1,0 +1,84 @@
+[
+  {
+    "recipe_image": "https://i.ibb.co/S3GCVC0/images.jpg",
+    "recipe_id": "001",
+    "recipe_name": "Grilled Lemon Herb Chicken",
+    "short_description": "Juicy grilled chicken marinated in lemon and herbs, perfect for a quick and flavorful dinner.",
+    "ingredients": ["550 g chicken", "120 ml lemon juice", "2 tbsp olive oil", "2 cloves garlic, minced", "1 tsp dried oregano", "Salt and pepper to taste"],
+    "preparing_time": "30 min",
+    "calories": "320 calories"
+  },
+  {
+    "recipe_image": "https://i.ibb.co/RpQhfgn/images.jpg",
+    "recipe_id": "002",
+    "recipe_name": "Quinoa Salad with Roasted Vegetables",
+    "short_description": "Nutritious quinoa salad with roasted vegetables, tossed in a tangy vinaigrette dressing.",
+    "ingredients": [
+      "200 g quinoa",
+      "1 red bell pepper, diced",
+      "1 zucchini, sliced",
+      "1 cup cherry tomatoes, halved",
+      "2 tbsp balsamic vinegar",
+      "2 tbsp olive oil"
+    ],
+    "preparing_time": "25 min",
+    "calories": "250 calories"
+  },
+  {
+    "recipe_image": "https://i.ibb.co/jvDK7hw/download.jpg",
+    "recipe_id": "003",
+    "recipe_name": "Spinach and Feta Stuffed Chicken Breast",
+    "short_description": "Tender chicken breasts stuffed with spinach and feta cheese, baked to perfection for a delightful meal.",
+    "ingredients": [
+      "4 chicken breasts",
+      "100 g spinach leaves",
+      "100 g feta cheese, crumbled",
+      "2 cloves garlic, minced",
+      "1 tsp dried basil",
+      "Salt and pepper to taste"
+    ],
+    "preparing_time": "40 min",
+    "calories": "280 calories"
+  },
+  {
+    "recipe_image": "https://i.ibb.co/3MvdjnD/images.jpg",
+    "recipe_id": "004",
+    "recipe_name": "Vegetable Stir-Fry with Tofu",
+    "short_description": "Colorful vegetable stir-fry with tofu, seasoned with ginger and garlic, perfect for a quick and nutritious meal.",
+    "ingredients": [
+      "300 g firm tofu, cubed",
+      "1 red bell pepper, sliced",
+      "1 broccoli head, cut into florets",
+      "1 carrot, julienned",
+      "2 tbsp soy sauce",
+      "1 tbsp sesame oil"
+    ],
+    "preparing_time": "20 min",
+    "calories": "200 calories"
+  },
+  {
+    "recipe_image": "https://i.ibb.co/CPWRCyy/images.jpg",
+    "recipe_id": "005",
+    "recipe_name": "Mango Avocado Salsa",
+    "short_description": "Fresh and vibrant salsa with ripe mangoes, creamy avocados, and zesty lime, perfect for dipping or topping.",
+    "ingredients": [
+      "2 ripe mangoes, diced",
+      "1 avocado, diced",
+      "1/4 cup red onion, finely chopped",
+      "1/4 cup cilantro, chopped",
+      "1 jalapeno, seeded and minced",
+      "Juice of 2 limes"
+    ],
+    "preparing_time": "15 min",
+    "calories": "150 calories"
+  },
+  {
+    "recipe_image": "https://i.ibb.co/8c0x0rq/images.jpg",
+    "recipe_id": "006",
+    "recipe_name": "Greek Yogurt Parfait",
+    "short_description": "Creamy Greek yogurt layered with fresh berries, crunchy granola, and a drizzle of honey, a delightful breakfast or snack option.",
+    "ingredients": ["1 cup Greek yogurt", "1/2 cup mixed berries", "1/4 cup granola", "1 tbsp honey", "Fresh mint leaves for garnish"],
+    "preparing_time": "10 min",
+    "calories": "180 calories"
+  }
+]

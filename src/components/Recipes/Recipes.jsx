@@ -1,7 +1,16 @@
+import { useEffect, useState } from "react";
 import RecipesCards from "../RecipesCards/RecipesCards";
 import RecipesSidebar from "../RecipesSidebar/RecipesSidebar";
 
 const Recipes = () => {
+  const [recipes, setRecipes] = useState([]);
+
+  useEffect(() => {
+    fetch("recipes.json")
+      .then((res) => res.json())
+      .then((data) => setRecipes(data));
+  }, []);
+
   return (
     <div className="mt-24">
       <div className="text-center space-y-6 px-5 mb-12">
@@ -12,7 +21,7 @@ const Recipes = () => {
       </div>
 
       <div className="flex gap-6 flex-col lg:flex-row justify-center">
-        <RecipesCards></RecipesCards>
+        <RecipesCards recipes={recipes}></RecipesCards>
         <RecipesSidebar></RecipesSidebar>
       </div>
     </div>
