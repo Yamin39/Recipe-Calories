@@ -4,9 +4,11 @@ const Card = ({ recipe, handleWantToCook }) => {
   const { recipe_id, recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = recipe;
 
   return (
-    <div className="p-6 border border-[#28282833] rounded-2xl">
+    <div className="p-6 border border-[#28282833] rounded-2xl flex flex-col justify-between">
       {/* part-1 */}
-      <img className="rounded-2xl w-full" src={recipe_image} alt="" />
+      <div className="h-[12.5rem]">
+        <img className="rounded-2xl w-full h-full" src={recipe_image} alt="" />
+      </div>
 
       {/* part-2 */}
       <div className="mt-6 pb-4 border-b border-[#2828281A] space-y-4">
@@ -48,12 +50,15 @@ const Card = ({ recipe, handleWantToCook }) => {
           <p>{calories}</p>
         </div>
       </div>
-      <button
-        onClick={() => handleWantToCook(recipe_id)}
-        className="btn h-auto py-3 px-6 rounded-[3.125rem] bg-primary-green hover:bg-primary-green hover:brightness-95 border-none font-medium text-lg text-dark-full"
-      >
-        Want to Cook
-      </button>
+
+      <div>
+        <button
+          onClick={() => handleWantToCook(recipe_id)}
+          className="btn h-auto py-3 px-6 rounded-[3.125rem] bg-primary-green hover:bg-primary-green hover:brightness-95 border-none font-medium text-lg text-dark-full"
+        >
+          Want to Cook
+        </button>
+      </div>
     </div>
   );
 };

@@ -43,8 +43,6 @@ const Recipes = () => {
     setCurrentlyCooking([...currentlyCooking, id]);
   };
 
-  console.log(currentlyCooking);
-
   return (
     <div className="mt-24">
       <div className="text-center space-y-6 px-5 mb-12">
