@@ -1,0 +1,10 @@
+@media screen and (max-width: 1280px) {
+  .table-container {
+    font-size: 0.75rem;
+  }
+  .table-container th,
+  .table-container td {
+    padding-left: 0.688rem;
+    padding-right: 0.688rem;
+  }
+}

@@ -11,7 +11,7 @@ const Recipes = () => {
         </p>
       </div>
 
-      <div className="flex gap-6 flex-col lg:flex-row justify-center items-center">
+      <div className="flex gap-6 flex-col lg:flex-row justify-center">
         <RecipesCards></RecipesCards>
         <RecipesSidebar></RecipesSidebar>
       </div>
