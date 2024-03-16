@@ -1,15 +1,49 @@
 import { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import RecipesCards from "../RecipesCards/RecipesCards";
 import RecipesSidebar from "../RecipesSidebar/RecipesSidebar";
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
 
+  const [wantToCook, setWantToCook] = useState([]);
+
+  const [currentlyCooking, setCurrentlyCooking] = useState([]);
+
   useEffect(() => {
     fetch("recipes.json")
       .then((res) => res.json())
       .then((data) => setRecipes(data));
   }, []);
+
+  const notify = () =>
+    toast.warn("This recipe is already selected!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+  const handleWantToCook = (id) => {
+    if (wantToCook.includes(id) === false) {
+      setWantToCook([...wantToCook, id]);
+    } else {
+      notify();
+    }
+  };
+
+  const handlePreparing = (id) => {
+    const remaining = wantToCook.filter((recipeId) => recipeId !== id);
+    setWantToCook(remaining);
+    setCurrentlyCooking([...currentlyCooking, id]);
+  };
+
+  console.log(currentlyCooking);
 
   return (
     <div className="mt-24">
@@ -21,9 +55,10 @@ const Recipes = () => {
       </div>
 
       <div className="flex gap-6 flex-col lg:flex-row justify-center">
-        <RecipesCards recipes={recipes}></RecipesCards>
-        <RecipesSidebar></RecipesSidebar>
+        <RecipesCards recipes={recipes} handleWantToCook={handleWantToCook}></RecipesCards>
+        <RecipesSidebar recipes={recipes} wantToCook={wantToCook} handlePreparing={handlePreparing} currentlyCooking={currentlyCooking}></RecipesSidebar>
       </div>
+      <ToastContainer />
     </div>
   );
 };

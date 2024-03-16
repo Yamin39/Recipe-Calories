@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-const Card = ({ recipe }) => {
-  const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = recipe;
+const Card = ({ recipe, handleWantToCook }) => {
+  const { recipe_id, recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = recipe;
 
   return (
     <div className="p-6 border border-[#28282833] rounded-2xl">
@@ -48,7 +48,10 @@ const Card = ({ recipe }) => {
           <p>{calories}</p>
         </div>
       </div>
-      <button className="btn h-auto py-3 px-6 rounded-[3.125rem] bg-primary-green hover:bg-primary-green hover:brightness-95 border-none font-medium text-lg text-dark-full">
+      <button
+        onClick={() => handleWantToCook(recipe_id)}
+        className="btn h-auto py-3 px-6 rounded-[3.125rem] bg-primary-green hover:bg-primary-green hover:brightness-95 border-none font-medium text-lg text-dark-full"
+      >
         Want to Cook
       </button>
     </div>
@@ -57,6 +60,7 @@ const Card = ({ recipe }) => {
 
 Card.propTypes = {
   recipe: PropTypes.object,
+  handleWantToCook: PropTypes.func,
 };
 
 export default Card;
