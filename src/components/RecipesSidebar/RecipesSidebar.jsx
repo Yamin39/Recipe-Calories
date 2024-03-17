@@ -10,7 +10,6 @@ const RecipesSidebar = ({ recipes, wantToCook, handlePreparing, currentlyCooking
 
         <div className="overflow-x-auto">
           <table className="table table-zebra table-container font-fira-sans">
-            {/* head */}
             <thead>
               <tr>
                 <th></th>
@@ -21,7 +20,6 @@ const RecipesSidebar = ({ recipes, wantToCook, handlePreparing, currentlyCooking
               </tr>
             </thead>
             <tbody>
-              {/* row 1 */}
               {wantToCook.map((id, i) => {
                 const { recipe_id, recipe_name, preparing_time, calories } = recipes.find((recipe) => recipe.recipe_id === id);
                 return (
@@ -54,7 +52,6 @@ const RecipesSidebar = ({ recipes, wantToCook, handlePreparing, currentlyCooking
 
         <div className="overflow-x-auto">
           <table className="table table-zebra table-container font-fira-sans">
-            {/* head */}
             <thead>
               <tr>
                 <th></th>

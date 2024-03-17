@@ -5,18 +5,15 @@ const Card = ({ recipe, handleWantToCook }) => {
 
   return (
     <div className="p-6 border border-[#28282833] rounded-2xl flex flex-col justify-between">
-      {/* part-1 */}
       <div className="h-[12.5rem]">
-        <img className="rounded-2xl w-full h-full" src={recipe_image} alt="" />
+        <img className="rounded-2xl w-full h-full object-cover" src={recipe_image} alt="" />
       </div>
 
-      {/* part-2 */}
       <div className="mt-6 pb-4 border-b border-[#2828281A] space-y-4">
         <h4 className="text-xl font-semibold text-dark-two">{recipe_name}</h4>
         <p className="font-fira-sans text-dark-six">{short_description}</p>
       </div>
 
-      {/* part-3 */}
       <div className="mt-6 space-y-4 pb-4 border-b border-[#2828281A]">
         <h6 className="font-medium text-lg text-dark-two">Ingredients: {ingredients.length}</h6>
         <ul className="text-lg font-fira-sans text-dark-six list-disc list-inside">
@@ -26,7 +23,6 @@ const Card = ({ recipe, handleWantToCook }) => {
         </ul>
       </div>
 
-      {/* part-4 */}
       <div className="font-fira-sans text-dark-80 my-6 flex gap-4">
         <div className="flex gap-2">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
